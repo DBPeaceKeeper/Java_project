@@ -3,19 +3,13 @@ package src.ppt3;
 public class MainClass {
 
 	public static void main(String[] args) {
-		Person lee = new Person("lee", 20, "810000-2000000");
-		Student cho = new Student("cho", 21, "910000-1000000","한직교",1,3);
+		MyImplement A = new MyImplement();
 		
-		lee.greeting();
-		System.out.println("--------------------------------------------");
+		A.method1();
+		A.method2();
 		
-		cho.greeting();
-		System.out.println("--------------------------------------------");
-		
-		cho.changeName("Cho Yong Ja");
-
-		cho.greeting();
-		System.out.println("--------------------------------------------");
-
+		System.out.println(A.Value1);
+		System.out.println(A instanceof MyImplement);
+		System.out.println(A instanceof MyInterface);
 	}
 }
