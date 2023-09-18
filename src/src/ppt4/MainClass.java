@@ -1,5 +1,15 @@
 package src.ppt4;
 
-public class MainClass {
+import java.time.LocalDate;
 
+public class MainClass {
+	
+	public static void main(String[] args) {
+		
+		LocalDate currentDate = LocalDate.now();
+		System.out.println(currentDate);
+		
+		
+	}
+	
 }
