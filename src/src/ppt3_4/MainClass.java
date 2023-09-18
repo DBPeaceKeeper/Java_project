@@ -16,6 +16,6 @@ public class MainClass {
 		
 		sales.changeTitle("lee", "president");
 		sales.showEmployees();
-	}
+	} 
 
 }

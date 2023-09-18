@@ -81,7 +81,7 @@ public class Department{
 			System.out.println("Employee()");
 		}
 		public Employee(String name) { 
-			this(name, "staff"); 
+			this(name, "staff");
 		}
 		public Employee(String name, String title) { 
 			this.setName(name);

@@ -24,7 +24,7 @@ public class Department {
 	    		System.out.println("이름 : " + employee.getName());
 	    		System.out.println("직급 : " + employee.getTitle());
 	    		System.out.println("=====================");
-	    	}
+	    	} 
 		}
 		
 	}
