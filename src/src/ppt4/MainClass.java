@@ -1,26 +1,29 @@
 package src.ppt4;
 
-import java.time.LocalDate;
+import java.util.Arrays;
 
 public class MainClass {
 	
 	public static void main(String[] args) {
 		
-			String strJava = "Java";
-			String strJava2 = new String("Java");
+			int[] arrInt = {1,2,3,4,5};
+			int[] arrInt2 = new int[] {10,20,30,40,50};
 			
-			if(strJava == strJava2) {
-				System.out.println("== 비교연산으로" + strJava + "와" + strJava2 + "는 같다.");
-			} else {
-				System.out.println("== 비교연산으로" + strJava + "와" + strJava2 + "는 다르다.");
+			int[] arrInt3 = new int[5];
+			int[] arrInt4 = new int[6];
+			
+			System.arraycopy(arrInt, 0, arrInt3, 0,3);
+			arrInt4 = Arrays.copyOf(arrInt2, arrInt2.length);
+			
+			for(int value : arrInt3) {
+				System.out.print(value + " ");
 			}
-		
-			if(strJava.equals(strJava2)) {
-				System.out.println("equals 메서드로" + strJava + "와" + strJava2 + "는 같다.");
-			} else {
-				System.out.println("equals 메서드로" + strJava + "와" + strJava2 + "는 다르다.");
+			System.out.println();
+			
+			for(int value : arrInt4) {
+				System.out.print(value + " ");
 			}
-	
+			System.out.println();
 	}
 	 
 }
