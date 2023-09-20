@@ -1,30 +1,21 @@
 package src.ppt4;
 
-import java.util.Arrays;
+import java.util.Scanner;
 
 public class MainClass {
 	
 	public static void main(String[] args) {
+		char str;
 		
-			int[] arrInt = {1,2,3,4,5};
-			int[] arrInt2 = new int[] {10,20,30,40,50};
-			
-			int[] arrInt3 = new int[5];
-			int[] arrInt4 = new int[6];
-			
-			System.arraycopy(arrInt, 0, arrInt3, 0,3);
-			arrInt4 = Arrays.copyOf(arrInt2, arrInt2.length);
-			
-			for(int value : arrInt3) {
-				System.out.print(value + " ");
+		try(Scanner sc = new Scanner(System.in)){
+			str = sc.next().charAt(0);
+		}
+		
+		for(int i = str; i - 97 >= 0; i--) {
+			for(int j = i; j >= 97; j--) {
+				System.out.printf("%c", j);
 			}
-			System.out.println();
-			
-			for(int value : arrInt4) {
-				System.out.print(value + " ");
-			}
-			System.out.println();
+			System.out.println("");
+		}
 	}
-	 
 }
- 
