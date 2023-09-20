@@ -33,7 +33,7 @@ public class Object {
 		for(int i = 0; i < object.size(); i++) {
 			if(i == object.size() - 1) {
 				System.out.println(object.get(i));
-			}
+			} 
 			else if(object.get(i).equals(object.get(i + 1))) {
 				continue;
 			}
