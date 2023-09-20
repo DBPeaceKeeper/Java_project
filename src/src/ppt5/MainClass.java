@@ -44,6 +44,11 @@ public class MainClass {
 		a.printObject();
 		*/
 		
-		
+		/* 3번
+		CountChar exam = new CountChar();
+		exam.inputString();
+		exam.countChar();
+		exam.inputCountStr();
+		*/
 	}
 }
