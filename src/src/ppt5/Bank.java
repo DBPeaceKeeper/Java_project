@@ -1,50 +1,50 @@
 package src.ppt5;
 
+import java.util.HashMap;
 
 public class Bank {
-	
-	private int money;
-	
-	public Bank(){
-		Thread input = new Thread(new InputMoney());
-		Thread output = new Thread();
-	}
-	
-	class tongJang {
-		
-	
-	}
-	
-	static class InputMoney implements Runnable {
+	private HashMap<Integer, Integer> accountNum = new HashMap<>();	
 
-		public void run() {
-			
-		}
-		
-	}
-	
-	
-}
+	public Bank() {
+		Integer userAccount;
+		// 계좌번호 1~100 랜덤 생성
+		do {
+			userAccount = (int) (Math.random() * 100 + 1);
+		} while(accountNum.containsKey(userAccount));
 
-/*
-static class IncrementThread implements Runnable{
-@Override
-public void run() {
-	synchronized(obj) {
-		for(int i = 0; i < 10; i++) {
-			if(i == 5) {
-				try {
-					obj.notify();
-					obj.wait();
-				} catch (InterruptedException e) {
-					e.printStackTrace();
-				}
-			}
-			icrCnt++;
-			System.out.println("(+)" + ++counter + " ");
+		accountNum.put(userAccount, 0);
+		System.out.println("계좌번호가 생성됐습니다: " + userAccount);
+	}
+
+	public synchronized void deposit(int Num, int money) {
+		if(!accountNum.containsKey(Num)) {
+			System.out.println("존재하지 않는 계좌번호입니다.");
 		}
-		obj.notify();
+		else {
+			money += accountNum.get(Num);
+			accountNum.put(Num, money);
+		}
+	}
+
+	public synchronized void withDrawal(int Num, int money) {
+		if(!accountNum.containsKey(Num)) {
+			System.out.println("존재하지 않는 계좌번호입니다.");
+		}
+		else if (accountNum.get(Num) > money){
+			System.out.println("계좌에 잔액이 부족합니다.");
+		}
+		else {
+			money -= accountNum.get(Num);
+			accountNum.put(Num, money);	
+		}
+	}
+
+	public void pirntBalance(int Num) {
+		if(!accountNum.containsKey(Num)) {
+			System.out.println("존재하지 않는 계좌번호입니다.");
+		}
+		else {
+			System.out.println("계좌의 잔액은 " + accountNum.get(Num) + "원 입니다.");
+		}
 	}
 }
-}
-*/
