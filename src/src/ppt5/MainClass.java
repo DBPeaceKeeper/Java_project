@@ -1,17 +1,54 @@
 package src.ppt5;
 
-
-//import java.util.Scanner;
 public class MainClass {
-
 
 	public static void main(String[] args) {
 		
 	}
-
 }
 
 
+/*
+ 		ArrayList<String> list = new ArrayList<String>();
+		String str;
+
+		System.out.println("문자열을 입력해주세요. q를 누르면 종료됩니다.");
+
+		Scanner sc = new Scanner(System.in);
+		do {
+			str = sc.nextLine();
+			if(str.equals("q")) { break; }
+			list.add(str);
+		} while (true);
+
+		sc.close();
+		
+		Comparator<String> big = ((String a, String b) -> {
+			if(a.length() > b.length()) {
+				return 1;            
+			}
+			else if(a.length() < b.length()) {
+				return -1;
+			}
+			else {
+				if(a.charAt(0) > b.charAt(0)) {
+					return 1;
+				}
+				else if(a.charAt(0) < b.charAt(0)) {
+					return -1;
+				}
+				else {
+					return 0;
+				}
+			}
+		});
+
+		Collections.sort(list,big);
+
+		for(String elem : list) {
+			System.out.println(elem);
+		}
+ */
 
 /*		
 public class MainClass {
@@ -213,7 +250,7 @@ static class DecrementThread implements Runnable{
 			str = sc.nextLine();
 			list.add(str);
 		} while (!str.equals("q"));
-		
+
 		sc.close();
 
 		Comparator<String> big = ((String a, String b) -> {
@@ -235,7 +272,7 @@ static class DecrementThread implements Runnable{
 				}
 			}
 		});
-		
+
 		Collections.sort(list,big);
 
 		for(String elem : list) {
